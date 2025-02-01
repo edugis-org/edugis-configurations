@@ -6,7 +6,8 @@
       -0.7238730987698005
     ],
     "pitch": 0,
-    "bearing": 0
+    "bearing": 0,
+    "maxPitch": 80
   },
   "datacatalog": [
     {
@@ -1180,6 +1181,7 @@
               "type": "raster-dem",
               "tileSize": 256,
               "encoding": "terrarium",
+              "maxzoom": 15,
               "tiles": [
                 "https://t1.edugis.nl/mapproxy/nextzenelevation/wmts/nextzenelevation/webmercator/{z}/{x}/{y}.png",
                 "https://t2.edugis.nl/mapproxy/nextzenelevation/wmts/nextzenelevation/webmercator/{z}/{x}/{y}.png",
