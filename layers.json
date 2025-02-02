@@ -8444,7 +8444,7 @@
                         "gemiddeld_inkomen_2020"
                       ]
                     ],
-                    "rgba(211,211,211,0.5)",
+                    "rgba(204, 204, 204, 1)",
                     [
                       "<",
                       [
@@ -8787,7 +8787,7 @@
                         "percentage_laaginkomen_2020"
                       ]
                     ],
-                    "rgba(211,211,211,0.5)",
+                    "rgba(204, 204, 204, 1)",
                     [
                       "<",
                       [
@@ -8885,6 +8885,10 @@
                         "translation": "percentage hoog inkomen 2020",
                         "unit": " %",
                         "valuemap": [
+                           [
+                            null,
+                            "Geen gegevens"
+                          ],
                           [
                             10,
                             "Minder dan 10%",
@@ -9103,7 +9107,7 @@
                         "percentage_hooginkomen_2020"
                       ]
                     ],
-                    "rgba(211, 211, 211, 0.5)",
+                    "rgba(204, 204, 204, 1)",
                     [
                       "<",
                       [
@@ -9439,7 +9443,7 @@
                         "autobezit_huishouden"
                       ]
                     ],
-                    "rgba(211, 211, 211, 0.5)",
+                    "rgba(204, 204, 204, 1)",
                     [
                       "<",
                       [
