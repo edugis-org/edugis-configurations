@@ -271,11 +271,11 @@
               "type": "raster",
               "tileSize": 256,
               "tiles": [
-                "https://service.pdok.nl/hwh/luchtfotorgb/wmts/v1_0/Actueel_ortho25/EPSG:3857/{z}/{x}/{y}.jpeg"
+                "https://service.pdok.nl/hwh/luchtfotorgb/wmts/v1_0/Actueel_orthoHR/EPSG:3857/{z}/{x}/{y}.jpeg"
               ],
               "attribution": "PDOK",
               "minzoom": 5,
-              "maxzoom": 18,
+              "maxzoom": 22,
               "bounds": [
                 2.75,
                 50.5,
