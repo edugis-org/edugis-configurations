@@ -51,7 +51,7 @@
         "type": "circle",
         "source": {
           "type": "geojson",
-          "data": "https://map.edugis.nl/cgi-bin/proxy.cgi?url=https://earthquake.usgs.gov/earthquakes/feed/v1.0/summary/all_hour.geojson",
+          "data": "https://earthquake.usgs.gov/earthquakes/feed/v1.0/summary/all_hour.geojson",
           "attribution": "USGS"
         },
         "metadata": {
@@ -90,7 +90,7 @@
         "type": "circle",
         "source": {
           "type": "geojson",
-          "data": "https://map.edugis.nl/cgi-bin/proxy.cgi?url=https://earthquake.usgs.gov/earthquakes/feed/v1.0/summary/2.5_day.geojson",
+          "data": "https://earthquake.usgs.gov/earthquakes/feed/v1.0/summary/2.5_day.geojson",
           "attribution": "USGS"
         },
         "metadata": {
@@ -129,7 +129,7 @@
         "type": "circle",
         "source": {
           "type": "geojson",
-          "data": "https://map.edugis.nl/cgi-bin/proxy.cgi?url=https://earthquake.usgs.gov/earthquakes/feed/v1.0/summary/2.5_week.geojson",
+          "data": "https://earthquake.usgs.gov/earthquakes/feed/v1.0/summary/2.5_week.geojson",
           "attribution": "USGS"
         },
         "metadata": {
@@ -168,7 +168,7 @@
         "type": "circle",
         "source": {
           "type": "geojson",
-          "data": "https://map.edugis.nl/cgi-bin/proxy.cgi?url=https://earthquake.usgs.gov/earthquakes/feed/v1.0/summary/2.5_month.geojson",
+          "data": "https://earthquake.usgs.gov/earthquakes/feed/v1.0/summary/2.5_month.geojson",
           "attribution": "USGS"
         },
         "metadata": {
