@@ -19,7 +19,7 @@
             "id": "casgis",
             "type": "getcapabilities",
             "url": "https://map.edugis.nl/cgi-bin/qgis_mapserv.fcgi?dpi=90&map=data/casgis/files/casgis/casgis.qgz",
-            "deniedlayers": "casgis,historische_streetview,kaartlaag1930,kaartlaag_1930,1832-KAARTLAAG",
+            
             "metadata": {
               "title": "CasGIS"
             }

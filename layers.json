@@ -11635,25 +11635,17 @@
                   "abstract": "De 100 meest recente aardbevingen in en rond Noord-Nederland gemeten door het KNMI ",
                   "title": "Aardbevingen Noord-Nederland",
                   "attributes": {
-                    "deniedattributes": [
-                      "localId",
-                      "quantitativeValue_uom"
-                    ],
-                    "emphasize": "quantitativeValue",
+                    "emphasize": "mag",
                     "translations": [
                       {
-                        "name": "quantitativeValue",
+                        "name": "mag",
                         "translation": "magnitude",
                         "unit": " R",
                         "decimals": 1
                       },
                       {
-                        "name": "validFrom",
+                        "name": "time",
                         "translation": "datum"
-                      },
-                      {
-                        "name": "year",
-                        "translation": "jaar"
                       }
                     ]
                   }
@@ -11666,7 +11658,7 @@
                     ],
                     [
                       "get",
-                      "quantitativeValue"
+                      "mag"
                     ],
                     2,
                     "#faf207",
@@ -11685,7 +11677,7 @@
                     ],
                     [
                       "get",
-                      "quantitativeValue"
+                      "mag"
                     ],
                     2,
                     5,

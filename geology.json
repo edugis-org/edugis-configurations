@@ -51,7 +51,7 @@
         "type": "circle",
         "source": {
           "type": "geojson",
-          "data": "https://earthquake.usgs.gov/earthquakes/feed/v1.0/summary/all_hour.geojson",
+          "data": "https://map.edugis.nl/cgi-bin/proxy.cgi?url=https://earthquake.usgs.gov/earthquakes/feed/v1.0/summary/all_hour.geojson",
           "attribution": "USGS"
         },
         "metadata": {
@@ -90,7 +90,7 @@
         "type": "circle",
         "source": {
           "type": "geojson",
-          "data": "https://earthquake.usgs.gov/earthquakes/feed/v1.0/summary/2.5_day.geojson",
+          "data": "https://map.edugis.nl/cgi-bin/proxy.cgi?url=https://earthquake.usgs.gov/earthquakes/feed/v1.0/summary/2.5_day.geojson",
           "attribution": "USGS"
         },
         "metadata": {
@@ -129,7 +129,7 @@
         "type": "circle",
         "source": {
           "type": "geojson",
-          "data": "https://earthquake.usgs.gov/earthquakes/feed/v1.0/summary/2.5_week.geojson",
+          "data": "https://map.edugis.nl/cgi-bin/proxy.cgi?url=https://earthquake.usgs.gov/earthquakes/feed/v1.0/summary/2.5_week.geojson",
           "attribution": "USGS"
         },
         "metadata": {
@@ -168,7 +168,7 @@
         "type": "circle",
         "source": {
           "type": "geojson",
-          "data": "https://earthquake.usgs.gov/earthquakes/feed/v1.0/summary/2.5_month.geojson",
+          "data": "https://map.edugis.nl/cgi-bin/proxy.cgi?url=https://earthquake.usgs.gov/earthquakes/feed/v1.0/summary/2.5_month.geojson",
           "attribution": "USGS"
         },
         "metadata": {
@@ -215,19 +215,17 @@
           "abstract": "De 100 meest recente aardbevingen in en rond Nederland gemeten door het KNMI ",
           "title": "Aardbevingen",
           "attributes": {
-            "deniedattributes": ["localId","quantitativeValue_uom"],
-            "emphasize": "quantitativeValue",
+            "emphasize": "mag",
             "translations": [
-              {"name": "quantitativeValue", "translation": "magnitude", "unit": " R", "decimals": 1},
-              {"name": "validFrom", "translation": "datum"},
-              {"name": "year", "translation": "jaar"}
+              {"name": "mag", "translation": "magnitude", "unit": " R", "decimals": 1},
+              {"name": "time", "translation": "datum"}
             ]
           }
         },
         "paint": {
           "circle-color": [
             "interpolate",["linear"],
-            ["get","quantitativeValue"],
+            ["get","mag"],
             2,"#faf207",
             4,"#faa907",
             6,"#fa6c07",
@@ -235,7 +233,7 @@
           ],
           "circle-radius": [
             "interpolate",["exponential",2],
-            ["get","quantitativeValue"],
+            ["get","mag"],
             2,5,
             4,10,
             6,20,
