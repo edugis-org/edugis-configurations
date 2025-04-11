@@ -659,7 +659,7 @@
                       "id": "2e12eb6e-1188-42d0-91f1-edb28627a58c",
                       "type": "fill",
                       "metadata": {
-                        "title": "provincie",
+                        "title": "provincie vlak",
                         "attributes": {
                           "deniedattributes": "water",
                           "translations": [
@@ -16187,25 +16187,6 @@
                 "https://tiles.edugis.nl/mapproxy/picodakdelen/wms?LAYERS=dakdelen2"
               ],
               "attribution": "Pico"
-            }
-          }
-        },
-        {
-          "type": "wms",
-          "title": "Risico's bij accuproductie",
-          "layerInfo": {
-            "id": "Risico_accuproductie",
-            "type": "raster",
-            "maxzoom": 7,
-            "metadata": {
-              "getFeatureInfoFormat": "application/json"
-            },
-            "source": {
-              "maxzoom": 7,
-              "type": "raster",
-              "tiles": [
-                "https://map.edugis.nl/cgi-bin/qgis_mapserv.fcgi?dpi=90&map=data/eduqgis/files/Risico accuproductie.qgs&layers=Risico%20accuproductie"
-              ]
             }
           }
         }
