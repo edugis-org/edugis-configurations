@@ -583,10 +583,12 @@
     {
       "type": "group",
       "title": "Administratieve indelingen",
+      "opened": true,
       "sublayers": [
         {
           "type": "group",
           "title": "Provincie, gemeente, wijk, buurt (2023)",
+          "opened": true,
           "sublayers": [
             {
               "type": "geojson",
@@ -632,10 +634,10 @@
               }
             },
             {
-              "title": "Provincies (2023)",
-              "id": "provincies2023",
+              "title": "Provinciegrenzen (2023)",
+              "id": "provinciegrenzen2023",
               "layerInfo": {
-                "id": "provincies2023style",
+                "id": "provinciegrenzen2023style",
                 "type": "style",
                 "source": {
                   "version": 8,
@@ -656,10 +658,10 @@
                   },
                   "layers": [
                     {
-                      "id": "2e12eb6e-1188-42d0-91f1-edb28627a58c",
+                      "id": "3f12eb6e-1188-42d0-91f1-edb28627a58c",
                       "type": "fill",
                       "metadata": {
-                        "title": "provincie vlak",
+                        "title": "provincies",
                         "attributes": {
                           "deniedattributes": "water",
                           "translations": [
@@ -814,14 +816,7 @@
                       "paint": {
                         "fill-color": "rgba(227,26,28,0)"
                       },
-                      "filter": [
-                        "==",
-                        [
-                          "get",
-                          "water"
-                        ],
-                        "NEE"
-                      ]
+                      "filter": ["==",["get","water"],"NEE"]
                     },
                     {
                       "id": "provincie2023-outline",
@@ -854,6 +849,249 @@
                           2,
                           16,
                           12
+                        ]
+                      },
+                      "filter": [
+                        "==",
+                        [
+                          "get",
+                          "water"
+                        ],
+                        "NEE"
+                      ]
+                    }
+                  ]
+                }
+              }
+            },
+            {
+              "title": "Provincies (2023)",
+              "checked":true,
+              "id": "provincies2023",
+              "layerInfo": {
+                "id": "provincies2023style",
+                "type": "style",
+                "source": {
+                  "version": 8,
+                  "sources": {
+                    "provincie2023source": {
+                      "type": "vector",
+                      "tiles": [
+                        "https://tiles.edugis.nl/data/public.provincies_2023_geo/mvt/{z}/{x}/{y}?geom_column=geom&columns=provincienaam,water,omgevingsadressendichtheid,bevolkingsdichtheid_inwoners_per_km2,aantal_inwoners,mannen,vrouwen,percentage_personen_0_tot_15_jaar,percentage_personen_15_tot_25_jaar,percentage_personen_25_tot_45_jaar,percentage_personen_45_tot_65_jaar,percentage_personen_65_jaar_en_ouder,percentage_ongehuwd,percentage_gescheid,percentage_verweduwd,aantal_huishoudens,percentage_eenpersoonshuishoudens,percentage_huishoudens_zonder_kinderen,percentage_huishoudens_met_kinderen,gemiddelde_huishoudsgrootte,percentage_met_herkomstland_nederland,percentage_met_herkomstland_uit_europa_excl_nl,percentage_met_herkomstland_buiten_europa,percentage_geb_in_nl_met_herkomstland_nederland,perc_geb_in_nl_met_herkomstland_in_europa_ex_nl,perc_geb_in_nl_met_herkomstland_buiten_europa,perc_geb_buiten_nl_met_herkomstlnd_in_europa_ex_nl,perc_geb_buiten_nl_met_herkomstlnd_buiten_europa,oppervlakte_totaal_in_ha,oppervlakte_land_in_ha,oppervlakte_water_in_ha&include_nulls=0"
+                      ],
+                      "bounds": [
+                        3.30793777958783,
+                        50.7503734330573,
+                        7.22699558355019,
+                        53.5764233247369
+                      ],
+                      "attribution": "CBS"
+                    }
+                  },
+                  "layers": [
+                    {
+                      "id": "2e12eb6e-1188-42d0-91f1-edb28627a58c",
+                      "type": "fill",
+                      "metadata": {
+                        "title": "provincies",
+                        "attributes": {
+                          "deniedattributes": "water",
+                          "translations": [
+                            {
+                              "name": "provincienaam",
+                              "translation": "naam"
+                            },
+                            {
+                              "name": "aantal_inwoners",
+                              "translation": "aantal inwoners"
+                            },
+                            {
+                              "name": "omgevingsadressendichtheid",
+                              "translation": "omgevingsadressendichtheid"
+                            },
+                            {
+                              "name": "bevolkingsdichtheid_inwoners_per_km2",
+                              "translation": "bevolkingsdichtheid",
+                              "unit": " inw / km2"
+                            },
+                            {
+                              "name": "mannen",
+                              "translation": "aantal mannen"
+                            },
+                            {
+                              "name": "vrouwen",
+                              "translation": "aantal vrouwen"
+                            },
+                            {
+                              "name": "percentage_personen_0_tot_15_jaar",
+                              "translation": "personen 0 tot 15 jaar",
+                              "unit": " %"
+                            },
+                            {
+                              "name": "percentage_personen_15_tot_25_jaar",
+                              "translation": "personen 15 tot 25 jaar",
+                              "unit": " %"
+                            },
+                            {
+                              "name": "percentage_personen_25_tot_45_jaar",
+                              "translation": "personen 25 tot 45 jaar",
+                              "unit": " %"
+                            },
+                            {
+                              "name": "percentage_personen_45_tot_65_jaar",
+                              "translation": "personen 45 tot 65 jaar",
+                              "unit": " %"
+                            },
+                            {
+                              "name": "percentage_personen_65_jaar_en_ouder",
+                              "translation": "personen 65 jaar en ouder",
+                              "unit": " %"
+                            },
+                            {
+                              "name": "percentage_ongehuwd",
+                              "translation": "ongehuwd",
+                              "unit": " %"
+                            },
+                            {
+                              "name": "percentage_gescheid",
+                              "translation": "gescheiden",
+                              "unit": " %"
+                            },
+                            {
+                              "name": "percentage_verweduwd",
+                              "translation": "verweduwd",
+                              "unit": " %"
+                            },
+                            {
+                              "name": "aantal_huishoudens",
+                              "translation": "aantal huishoudens"
+                            },
+                            {
+                              "name": "percentage_eenpersoonshuishoudens",
+                              "translation": "eenpersoonshuishoudens",
+                              "unit": " %"
+                            },
+                            {
+                              "name": "percentage_huishoudens_zonder_kinderen",
+                              "translation": "huishoudens zonder kinderen",
+                              "unit": " %"
+                            },
+                            {
+                              "name": "percentage_huishoudens_met_kinderen",
+                              "translation": "huishoudens met kinderen",
+                              "unit": " %"
+                            },
+                            {
+                              "name": "gemiddelde_huishoudsgrootte",
+                              "translation": "gemiddelde huishoudsgrootte"
+                            },
+                            {
+                              "name": "percentage_met_herkomstland_nederland",
+                              "translation": "herkomstland nederland",
+                              "unit": " %"
+                            },
+                            {
+                              "name": "percentage_met_herkomstland_uit_europa_excl_nl",
+                              "translation": "herkomstland uit europa excl nl",
+                              "unit": " %"
+                            },
+                            {
+                              "name": "percentage_met_herkomstland_buiten_europa",
+                              "translation": "herkomstland buiten europa",
+                              "unit": " %"
+                            },
+                            {
+                              "name": "percentage_geb_in_nl_met_herkomstland_nederland",
+                              "translation": "geboren in NL met herkomstland nederland",
+                              "unit": " %"
+                            },
+                            {
+                              "name": "perc_geb_in_nl_met_herkomstland_in_europa_ex_nl",
+                              "translation": "geboren in NL met herkomstland in europa ex NL",
+                              "unit": " %"
+                            },
+                            {
+                              "name": "perc_geb_in_nl_met_herkomstland_buiten_europa",
+                              "translation": "geboren in NL met herkomstland buiten europa",
+                              "unit": " %"
+                            },
+                            {
+                              "name": "perc_geb_buiten_nl_met_herkomstlnd_in_europa_ex_nl",
+                              "translation": "geboren buiten NL met herkomstlnd in europa",
+                              "unit": " %"
+                            },
+                            {
+                              "name": "perc_geb_buiten_nl_met_herkomstlnd_buiten_europa",
+                              "translation": "geboren buiten NL met herkomstlnd buiten europa",
+                              "unit": " %"
+                            },
+                            {
+                              "name": "oppervlakte_totaal_in_ha",
+                              "translation": "oppervlakte totaal",
+                              "unit": " ha"
+                            },
+                            {
+                              "name": "oppervlakte_land_in_ha",
+                              "translation": "oppervlakte land",
+                              "unit": " ha"
+                            },
+                            {
+                              "name": "oppervlakte_water_in_ha",
+                              "translation": "oppervlakte water",
+                              "unit": " ha"
+                            }
+                          ]
+                        }
+                      },
+                      "source": "provincie2023source",
+                      "source-layer": "public.provincies_2023_geo",
+                    "paint": {
+                    "fill-color": ["match",["get","provincienaam"],
+                      "Groningen","rgba(20,180,103,0.45)",
+                      "Fryslan","rgba(255,193,7,0.45)",
+                      "Drenthe","rgba(232,112,2,0.45)",
+                      "Overijssel","rgba(58,93,183,0.45)",
+                      "Flevoland","rgba(238,196,125,0.45)",
+                      "Gelderland","rgba(210,98,159,0.45)",
+                      "Utrecht","rgba(97,176,218,0.45)",
+                      "Noord-Holland","rgba(198,156,55,0.45)",
+                      "Zuid-Holland","rgba(118,167,45,0.45)",
+                      "Zeeland","rgba(141,160,203,0.45)",
+                      "Noord-Brabant","rgba(226,226,100,0.45)",
+                      "Limburg","rgba(114,200,35,0.45)","rgba(255, 193, 7, 0.45)"
+                      ]
+                      },
+                      "filter": ["==",["get","water"],"NEE"]
+                    },
+                    {
+                      "id": "provincie2023",
+                      "metadata": {
+                        "title": "provincies",
+                        "attributes": {
+                          "deniedattributes": "water,aantal_inwoners,omgevingsadressendichtheid,bevolkingsdichtheid_inwoners_per_km2,mannen,vrouwen,percentage_personen_0_tot_15_jaar,percentage_personen_15_tot_25_jaar,percentage_personen_25_tot_45_jaar,personen 25 tot 45 jaar,percentage_personen_45_tot_65_jaar,percentage_personen_65_jaar_en_ouder,percentage_ongehuwd,percentage_gescheid,percentage_verweduwd,aantal_huishoudens,percentage_eenpersoonshuishoudens,percentage_huishoudens_zonder_kinderen,percentage_huishoudens_met_kinderen,gemiddelde_huishoudsgrootte,percentage_met_herkomstland_nederland,percentage_met_herkomstland_uit_europa_excl_nl,percentage_met_herkomstland_buiten_europa,percentage_geb_in_nl_met_herkomstland_nederland,perc_geb_in_nl_met_herkomstland_in_europa_ex_nl,perc_geb_in_nl_met_herkomstland_buiten_europa,perc_geb_buiten_nl_met_herkomstlnd_in_europa_ex_nl,perc_geb_buiten_nl_met_herkomstlnd_buiten_europa,oppervlakte_totaal_in_ha,oppervlakte_land_in_ha,oppervlakte_water_in_ha",
+                          "translations": [
+                            {
+                              "name": "provincienaam",
+                              "translation": "naam"
+                            }
+                          ]
+                        }
+                      },
+                      "type": "line",
+                      "source": "provincie2023source",
+                      "source-layer": "public.provincies_2023_geo",
+                      "paint": {
+                        "line-color": "#e31a1c",
+                        "line-width": [
+                          "interpolate",
+                          [
+                            "linear"
+                          ],
+                          [
+                            "zoom"
+                          ],
+                          7, 1.2,
+                          16, 12
                         ]
                       },
                       "filter": [
@@ -1288,8 +1526,7 @@
                               "name": "perc_geb_buiten_nl_met_herkomstlnd_buiten_europa",
                               "translation": "geboren buiten NL met herkomstlnd buiten europa",
                               "unit": " %"
-                            },
-                            {
+                            },{
                               "name": "gemiddeld_inkomen_2020",
                               "translation": "gemiddeld inkomen 2020 per persoon",
                               "unit": " x 1000 €"
@@ -1634,9 +1871,11 @@
             {
               "type": "group",
               "title": "Labels",
+              "opened":true,
               "sublayers": [
                 {
                   "title": "Provincienamen (2023)",
+                  "checked":true,
                   "id": "provincienamen2023",
                   "layerInfo": {
                     "id": "provincienamen2023",
@@ -11563,19 +11802,7 @@
                     "#000000"
                   ],
                   "fill-opacity": 0.8,
-                  "fill-outline-color": [
-                    "interpolate-lab",
-                    [
-                      "linear"
-                    ],
-                    [
-                      "zoom"
-                    ],
-                    7,
-                    "rgba(255,255,255,0)",
-                    20,
-                    "rgba(0,0,0,1)"
-                  ]
+                  "fill-outline-color": "rgba(128, 128, 128, 0)"
                 }
               }
             }
