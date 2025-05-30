@@ -1,0 +1,156 @@
+{
+  "title": "Landnamen",
+  "id": "osm-bright-country-names",
+  "type": "style",
+  "source": {
+    "sources": {
+      "openmaptiles_countryname": {
+        "type": "vector",
+        "url": "https://saturnus.geodan.nl/openmaptiles/data/v3.json"
+      }
+    },
+    "layers": [
+      {
+        "id": "country-place-country-other",
+        "metadata": {
+          "title": "Landnaam overig"
+        },
+        "type": "symbol",
+        "source": "openmaptiles_countryname",
+        "source-layer": "place",
+        "filter": ["all", ["==", "class", "country"], [">=", "rank", 3], ["!has", "iso_a2"]],
+        "layout": {
+          "text-font": ["Noto Sans Italic"],
+          "text-field": "{name:latin}",
+          "text-size": {
+            "stops": [
+              [3, 11],
+              [7, 17]
+            ]
+          },
+          "text-transform": "uppercase",
+          "text-max-width": 6.25,
+          "visibility": "visible"
+        },
+        "paint": {
+          "text-halo-blur": 1,
+          "text-color": "#334",
+          "text-halo-width": 2,
+          "text-halo-color": "rgba(255,255,255,0.8)"
+        }
+      },
+      {
+        "id": "country-place-country-3",
+        "type": "symbol",
+        "metadata": {
+          "title": "Landnaam (orde 3)"
+        },
+        "source": "openmaptiles_countryname",
+        "source-layer": "place",
+        "filter": ["all", ["==", "class", "country"], [">=", "rank", 3], ["has", "iso_a2"]],
+        "layout": {
+          "text-font": ["Noto Sans Bold"],
+          "text-field": "{name:latin}",
+          "text-size": {
+            "stops": [
+              [3, 11],
+              [7, 17]
+            ]
+          },
+          "text-transform": "uppercase",
+          "text-max-width": 6.25,
+          "visibility": "visible"
+        },
+        "paint": {
+          "text-halo-blur": 1,
+          "text-color": "#334",
+          "text-halo-width": 2,
+          "text-halo-color": "rgba(255,255,255,0.8)"
+        }
+      },
+      {
+        "id": "country-place-country-2",
+        "type": "symbol",
+        "metadata": {
+          "title": "Landnaam (orde 2)"
+        },
+        "source": "openmaptiles_countryname",
+        "source-layer": "place",
+        "filter": ["all", ["==", "class", "country"], ["==", "rank", 2], ["has", "iso_a2"]],
+        "layout": {
+          "text-font": ["Noto Sans Bold"],
+          "text-field": "{name:latin}",
+          "text-size": {
+            "stops": [
+              [2, 11],
+              [5, 17]
+            ]
+          },
+          "text-transform": "uppercase",
+          "text-max-width": 6.25,
+          "visibility": "visible"
+        },
+        "paint": {
+          "text-halo-blur": 1,
+          "text-color": "#334",
+          "text-halo-width": 2,
+          "text-halo-color": "rgba(255,255,255,0.8)"
+        }
+      },
+      {
+        "id": "country-place-country-1",
+        "type": "symbol",
+        "metadata": {
+          "title": "Landnaam (orde 1)"
+        },
+        "source": "openmaptiles_countryname",
+        "source-layer": "place",
+        "filter": ["all", ["==", "class", "country"], ["==", "rank", 1], ["has", "iso_a2"]],
+        "layout": {
+          "text-font": ["Noto Sans Bold"],
+          "text-field": "{name:latin}",
+          "text-size": {
+            "stops": [
+              [1, 11],
+              [4, 17]
+            ]
+          },
+          "text-transform": "uppercase",
+          "text-max-width": 6.25,
+          "visibility": "visible"
+        },
+        "paint": {
+          "text-halo-blur": 1,
+          "text-color": "#334",
+          "text-halo-width": 2,
+          "text-halo-color": "rgba(255,255,255,0.8)"
+        }
+      },
+      {
+        "id": "countryplace-continent",
+        "type": "symbol",
+        "metadata": {
+          "title": "Continent"
+        },
+        "source": "openmaptiles_countryname",
+        "source-layer": "place",
+        "maxzoom": 1,
+        "filter": ["==", "class", "continent"],
+        "layout": {
+          "text-font": ["Noto Sans Bold"],
+          "text-field": "{name:latin}",
+          "text-size": 14,
+          "text-max-width": 6.25,
+          "text-transform": "uppercase",
+          "visibility": "visible"
+        },
+        "paint": {
+          "text-halo-blur": 1,
+          "text-color": "#334",
+          "text-halo-width": 2,
+          "text-halo-color": "rgba(255,255,255,0.8)"
+        }
+      }
+    ]
+  }
+}
