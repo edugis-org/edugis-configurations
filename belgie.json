@@ -1,0 +1,470 @@
+{
+  "map": {
+    "zoom": 7.2,
+    "center": [ 4.744,50.542
+
+    ],
+    "pitch": 0,
+    "bearing": 0
+  },
+  "datacatalog": [
+    {
+      "type": "group",
+      "title": "Belgie",
+       "expanded": true,
+      "sublayers": [
+         {
+          "title": "belgie",
+          "type": "getcapabilities",
+          "layerInfo": {
+            "id": "belgie",
+            "tilecacheurl": ["https://tiles.edugis.nl/mapproxy/belgie/service"],
+            "type": "getcapabilities",
+            "url": "https://map.edugis.nl/cgi-bin/qgis_mapserv.fcgi?dpi=90&map=data/eduqgis/files/belgie/belgie_edugis.qgz",
+            "metadata": {
+              "title": "belgie"
+            }
+          },
+          "id": "belgie",
+          "checked": true
+        }
+
+      ]
+    },
+ 
+   {
+      "type": "group",
+      "title": "Achtergrondlagen",
+      "sublayers": [
+        {
+          "title": "Topografisch",
+          "type": "layergroup"
+        },
+        {
+          "title": "Standaard (OSM)",
+          "type": "reference",
+          "layerInfo": {
+            "id": "openstreetmap",
+            "type": "raster",
+            "metadata": {
+              "legendurl": "https://mapserver.edugis.nl/legends/wereld/osm_logo.png"
+            },
+            "source": {
+              "type": "raster",
+              "tileSize": 256,
+              "maxzoom": 19,
+              "tiles": [
+                "https://tiles.edugis.nl/mapproxy/osm/tiles/osm_EPSG900913/{z}/{x}/{y}.png?origin=nw"
+              ],
+              "attribution": "&copy; <a href=\"https://www.openstreetmap.org/about\" target=\"copyright\">OpenStreetMap contributors</a>"
+            }
+          }
+        },
+        {
+          "type": "reference",
+          "title": "Helder (OSM)",
+          "layerInfo": {
+            "id": "OsmBright",
+            "type": "style",
+            "source": "styles/openmaptiles/osmbright.json",
+            "metadata": {
+              "reference": true
+            }
+          }
+        },
+        {
+          "title": "Grijs (OSM)",
+          "type": "reference",
+          "checked": true,
+          "layerInfo": {
+            "id": "openstreetmapgray",
+            "type": "raster",
+            "metadata": {
+              "legendurl": "https://mapserver.edugis.nl/legends/wereld/osm_logo.png"
+            },
+            "source": {
+              "type": "raster",
+              "tileSize": 256,
+              "maxzoom": 19,
+              "tiles": [
+                "https://tiles.edugis.nl/mapproxy/osm/tiles/osmgrayscale_EPSG900913/{z}/{x}/{y}.png?origin=nw"
+              ],
+              "attribution": "&copy; <a href=\"https://www.openstreetmap.org/about\" target=\"copyright\">OpenStreetMap contributors</a>"
+            }
+          }
+        },
+        {
+          "type": "reference",
+          "title": "Donker (OSM)",
+          "layerInfo": {
+            "id": "DarkMatter",
+            "type": "style",
+            "source": "styles/openmaptiles/dark-matter.json",
+            "metadata": {
+              "reference": true
+            }
+          }
+        },   
+  {
+          "type": "reference",
+          "title": "Eenvoudig (OSM)",
+          "layerInfo": {
+            "id": "klokantechbasic",
+            "type": "style",
+            "source": "styles/openmaptiles/klokantech-basic.json",
+            "metadata": {
+              "reference": true
+            }
+          }
+        }, 
+{
+          "type": "reference",
+          "title": "Eenvoudig grijs (OSM)",
+          "layerInfo": {
+            "id": "Positron",
+            "type": "style",
+            "source": "styles/openmaptiles/positron.json",
+            "metadata": {
+              "reference": true
+            }
+          }
+        }, 
+{
+          "title": "Standaard (NL BRT)",
+          "type": "reference",
+          "layerInfo": {
+            "id": "brtachtergrondkaart",
+            "type": "raster",
+            "metadata": {
+              "reference": true,
+              "legendurl": "https://kaart.edugis.nl/data/img/brt.png"
+
+            },
+            "source": {
+              "type": "raster",
+              "tileSize": 256,
+              "tiles": [
+                "https://service.pdok.nl/brt/achtergrondkaart/wmts/v2_0/standaard/EPSG:3857/{z}/{x}/{y}.png"
+              ],
+              "attribution": "PDOK",
+              "minzoom": 5,
+              "maxzoom": 18,
+              "bounds": [
+                -1.6,
+                47.5,
+                13,
+                56
+              ]
+            }
+          }
+        },
+ {
+          "title": "Wateren (NL BRT)",
+          "type": "reference",
+          "checked": false,
+          "layerInfo": {
+            "id": "BRT_achtergrondkaart Water [tms]_id",
+            "type": "raster",
+            "source": {
+              "type": "raster",
+              "tileSize": 256,
+              "tiles": [
+                "https://service.pdok.nl/brt/achtergrondkaart/wmts/v2_0/water/EPSG:3857/{z}/{x}/{y}.png"
+              ],
+              "attribution": "© CC-BY Kadaster"
+            },
+            "metadata": {}
+          },
+          "id": "1275"
+        },
+ {
+          "type": "reference",
+          "title": "Standaard (Bing)",
+          "layerInfo": {
+            "id": "bingmaproad",
+            "metadata": {
+              "reference": true,
+              "bing": true
+            },
+            "type": "raster",
+            "source": {
+              "url": "https://dev.virtualearth.net/REST/V1/Imagery/Metadata/Road?output=json&include=ImageryProviders&uriScheme=https&key={bingkey}",
+              "maxzoom": 19
+            }
+          }
+        },
+ {
+          "type": "reference",
+          "title": "Zwart-Wit (Stamen)",
+          "layerInfo": {
+            "id": "stamentoner",
+            "metadata": {
+              "reference": true
+            },
+            "type": "raster",
+            "source": {
+              "type": "raster",
+              "tileSize": 256,
+              "tiles": [
+                "https://tiles.stadiamaps.com/tiles/stamen_toner/{z}/{x}/{y}.png"
+              ],
+              "attribution": "&copy; <a href=\"https://www.stamen.com\" target=\"attribution\">Stamen Design</a>,<a href=\"https://www.openstreetmap.org/about\" target=\"attribution\">OpenStreetMap contributors</a>",
+              "maxzoom": 17
+            }
+          }
+        },
+        {
+          "type": "layergroup",
+          "title": "Luchtfoto"
+        },
+        {
+          "type": "reference",
+          "title": "Wereld (ESRI World Imagery)",
+          "layerInfo": {
+            "id": "esriworldimagery",
+            "metadata": {
+              "reference": true
+            },
+            "type": "raster",
+            "source": {
+              "type": "raster",
+              "tiles": [
+                "https://server.arcgisonline.com/ArcGIS/rest/services/World_Imagery/MapServer/tile/{z}/{y}/{x}"
+              ],
+              "tileSize": 256,
+              "maxzoom": 22,
+              "attribution": "ESRI World Imagery"
+            }
+          }
+        }, 
+ {
+          "type": "reference",
+          "title": "Wereld (Microsoft Bing)",
+          "layerInfo": {
+            "id": "bingmapaerial",
+            "metadata": {
+              "reference": true,
+              "bing": true
+            },
+            "type": "raster",
+            "source": {
+              "url": "https://dev.virtualearth.net/REST/V1/Imagery/Metadata/Aerial?output=json&include=ImageryProviders&uriScheme=https&key={bingkey}",
+              "maxzoom": 18
+            }
+          }
+        },
+        {
+          "title": "Nederland-2016 (PDOK)",
+          "type": "reference",
+          "layerInfo": {
+            "id": "pdokluchtfotowmts2016",
+            "type": "raster",
+            "metadata": {
+              "reference": true,
+              "legendurl": "https://map.edugis.nl/legends2/pdoklufolegend2016.png"
+            },
+            "source": {
+              "type": "raster",
+              "tileSize": 256,
+              "tiles": [
+                "https://service.pdok.nl/hwh/luchtfotorgb/wmts/v1_0/2016_ortho25/EPSG:3857/{z}/{x}/{y}.jpeg"
+              ],
+              "attribution": "PDOK",
+              "minzoom": 5,
+              "maxzoom": 18,
+              "bounds": [
+                2.75,
+                50.5,
+                7.5,
+                53.6
+              ]
+            }
+          }
+        },
+        {
+          "title": "Nederland Actueel (PDOK)",
+          "type": "reference",
+          "layerInfo": {
+            "id": "pdokluchtfotowmtsactueel",
+            "type": "raster",
+            "metadata": {
+              "legendurl": "https://map.edugis.nl/legends2/pdoklufolegend.png",
+              "reference": true
+            },
+            "source": {
+              "type": "raster",
+              "tileSize": 256,
+              "tiles": [
+                "https://service.pdok.nl/hwh/luchtfotorgb/wmts/v1_0/Actueel_ortho25/EPSG:3857/{z}/{x}/{y}.jpeg"
+              ],
+              "attribution": "PDOK",
+              "minzoom": 5,
+              "maxzoom": 18,
+              "bounds": [
+                2.75,
+                50.5,
+                7.5,
+                53.6
+              ]
+            }
+          }
+        },
+        {
+          "type": "layergroup",
+          "title": "Overig"
+        },
+ {
+          "type": "reference",
+          "title": "Hybride | Wereld (Microsoft Bing)",
+          "layerInfo": {
+            "id": "bingmaphybrid",
+            "metadata": {
+              "reference": true,
+              "bing": true
+            },
+            "type": "raster",
+            "source": {
+              "url": "https://dev.virtualearth.net/REST/V1/Imagery/Metadata/AerialWithLabels?output=json&include=ImageryProviders&uriScheme=https&key={bingkey}",
+              "maxzoom": 18
+            }
+          }
+        },
+ {
+          "type": "reference",
+          "title": "Waterverf (Stamen)",
+          "layerInfo": {
+            "id": "stamenwatercolor",
+            "metadata": {
+              "reference": true
+            },
+            "type": "raster",
+            "source": {
+              "type": "raster",
+              "tileSize": 256,
+              "tiles": [
+                "https://tiles.stadiamaps.com/tiles/stamen_watercolor/{z}/{x}/{y}.jpg"
+              ],
+              "attribution": "&copy; <a href=\"https://www.stamen.com\" target=\"attribution\">Stamen Design</a>,<a href=\"https://www.openstreetmap.org/about\" target=\"attribution\">OpenStreetMap contributors</a>",
+              "maxzoom": 17
+            }
+          }
+        },
+     
+        {
+          "type": "reference",
+          "title": "Terrein | Relief (Stamen)",
+          "layerInfo": {
+            "id": "stamenterrain",
+            "metadata": {
+              "reference": true
+            },
+            "type": "raster",
+            "source": {
+              "type": "raster",
+              "tileSize": 256,
+              "tiles": [
+                "https://tiles.stadiamaps.com/tiles/stamen_terrain/{z}/{x}/{y}.png"
+              ],
+              "attribution": "&copy; <a href=\"https://www.stamen.com\" target=\"attribution\">Stamen Design</a>,<a href=\"https://www.openstreetmap.org/about\" target=\"attribution\">OpenStreetMap contributors</a>",
+              "maxzoom": 16
+            }
+          }
+        }
+
+      ]
+    }  ],
+  "tools": {
+    "toolbar": {
+      "visible": true,
+      "position": "opened",
+      "order": 0
+    },
+    "search": {
+      "visible": 1,
+      "position": "",
+      "order": 1
+    },
+    "datacatalog": {
+      "visible": 1,
+      "position": "",
+      "order": 2
+    },
+    "measure": {
+      "visible": 1,
+      "position": "",
+      "order": 3
+    },
+    "info": {
+      "visible": 1,
+      "position": "",
+      "order": 4
+    },
+    "maplanguage": {
+      "visible": false,
+      "position": "",
+      "order": 5
+    },
+    "pitch": {
+      "visible": 1,
+      "position": "",
+      "order": 6
+    },
+    "geolocate": {
+      "visible": true,
+      "position": "",
+      "order": 7
+    },
+    "draw": {
+      "visible": 1,
+      "position": "",
+      "order": 8
+    },
+    "importexport": {
+      "visible": false,
+      "position": "",
+      "order": 100
+    },
+    "datatoolbox": {
+      "visible": 0,
+      "position": "",
+      "order": 10
+    },
+    "sheetimport": {
+      "visible": 0,
+      "position": "",
+      "order": 11
+    },
+    "projchooser": {
+      "visible": false,
+      "position": "",
+      "order": 120
+    },
+    "zoomlevel": {
+      "visible": 1,
+      "position": "bottom-left",
+      "order": 0
+    },
+    "navigation": {
+      "visible": 1,
+      "position": "bottom-left",
+      "order": 1
+    },
+    "coordinates": {
+      "visible": 1,
+      "position": "bottom-center",
+      "order": 202
+    },
+    "scalebar": {
+      "visible": 1,
+      "position": "bottom-right",
+      "order": 203
+    },
+    "legend": {
+      "opened": 1,
+      "visible": 1,
+      "position": "top-right",
+      "order": 204
+    }
+  },
+  "keys": {}
+}
