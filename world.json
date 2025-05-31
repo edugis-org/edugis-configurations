@@ -3777,7 +3777,11 @@
         {
           "title": "Landnamen",
           "layerInfo": "./layers/osmbrightcountrynames.json"
-        },    
+        },
+        {
+          "title": "Landnamen (nl)",
+          "layerInfo": "./layers/osmbrightcountrynames_nl.json"
+        },
         {
           "title": "Snelwegen",
           "layerInfo": "./layers/osmbrightroads.json"
