@@ -125,7 +125,7 @@
         {
           "type": "geojson",
           "title": "Palestina",
-          "checked": false,
+          "checked": true,
           "layerInfo": {
             "id": "ba2be98b-a160-417d-9074-643dcf303463",
             "type": "fill",

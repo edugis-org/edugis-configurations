@@ -40,7 +40,7 @@
         {
           "type": "reference",
           "title": "Bing | Topografisch ",
-          "checked": true,
+          "checked": false,
           "layerInfo": {
             "id": "bingmaproad",
             "metadata": {
@@ -165,7 +165,7 @@
             }
           },
           "id": "OpenStreetMap_| Grijs_reference_id",
-          "checked": false
+          "checked": true
         },
         {
           "type": "reference",

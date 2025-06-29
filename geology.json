@@ -162,7 +162,7 @@
     {
       "type": "geojson",
       "title": "Aardbevingen deze maand > 2.5",
-      "checked": false,
+      "checked": true,
       "layerInfo": {
         "id": "abd0c37d-390d-4b9f-9752-84d42829dfe9",
         "type": "circle",
