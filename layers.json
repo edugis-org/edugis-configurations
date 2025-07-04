@@ -8313,7 +8313,7 @@
                 "source": {
                   "id": "ahnhillshading",
                   "type": "raster-dem",
-                  "tileSize": 512,
+                  "tileSize": 256,
                   "tiles": [
                     "https://tiles.edugis.nl/wcsahn/{z}/{x}/{y}",
                     "https://t1.edugis.nl/wcsahn/{z}/{x}/{y}",
