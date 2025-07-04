@@ -6,7 +6,8 @@
       14.88
     ],
     "pitch": 0,
-    "bearing": 0
+    "bearing": 0,
+    "maxPitch": 80
   },
   "datacatalog": [
     {
@@ -102,6 +103,27 @@
           }
         },
         {
+          "title": "St Eustatius hoogtekaart",
+          "layerInfo": {
+            "id": "st_eustatiushoogte",
+            "type": "raster",
+            "source": {
+              "type": "raster",
+              "tileSize": 256,
+              "attribution": "in te vullen",
+              "tiles": [
+                "https://api.ellipsis-drive.com/v3/ogc/wmts/c3773c58-2031-4ca1-a8aa-00a4c306e502?version=1.1.1,SERVICE=WMTS&REQUEST=GetTile&LAYER=4bcdf945-b148-41d6-a15f-ad0e2729ac4f_01212a78-b1e9-41ed-b11f-206b39fb66ec&STYLE=default&TILEMATRIXSET=urn:ogc:def:crs:EPSG::3857&TILEMATRIX={z}&TILEROW={y}&TILECOL={x}&FORMAT=image/png"
+              ],
+              "bounds": [-63.008835,17.456535,-62.942856,17.528818]
+            },
+            "metadata": {
+              "title": "Sint Eustatius hoogtekaart",
+              "legendurl": "https://kaart.edugis.nl/data/bes/sinteustatiuslegendahoogte.png",
+              "abstract": "Hoogtekaart (DSM) van St Eustatius, gepubliceerd op 21 mei 2025,  Deze laag is een hoogtekaart van St Eustatius, inclusief gebouwen en vegetatie (Digital Surface Model, DSM)"
+            }
+          }
+        },
+        {
           "title": "Saba luchtfoto's",
           "checked": 3,
           "layerInfo": {
@@ -141,6 +163,34 @@
               "title": "Saba infrarood luchtfoto's",
               "legendurl": "https://kaart.edugis.nl/data/bes/sabalegendainfrarood.png",
               "abstract": "Infrarood luchtfoto's van Saba, gepubliceerd op 21 mei 2025"
+            }
+          }
+        },
+        {
+          "type": "rasterdem",
+          "title": "Hoogteschaduwering",
+          "layerInfo": {
+            "id": "ahnhillshading",
+            "metadata": {
+              "title": "schaduwering",
+              "terrain": false
+            },
+            "type": "hillshade",
+            "source": {
+              "id": "ahnhillshading",
+              "type": "raster-dem",
+              "tileSize": 256,
+              "tiles": [
+                "https://tiles.edugis.nl/wcsahn/{z}/{x}/{y}",
+                "https://t1.edugis.nl/wcsahn/{z}/{x}/{y}",
+                "https://t2.edugis.nl/wcsahn/{z}/{x}/{y}",
+                "https://t3.edugis.nl/wcsahn/{z}/{x}/{y}"
+              ],
+              "maxzoom": 20,
+              "attribution": "Nog in te vullen"
+            },
+            "paint": {
+              "hillshade-exaggeration": 0.1
             }
           }
         }
