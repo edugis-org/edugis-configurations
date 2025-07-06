@@ -8325,7 +8325,7 @@
                   "attribution": "AHN"
                 },
                 "paint": {
-                  "hillshade-exaggeration": 1
+                  "hillshade-exaggeration": 0.1
                 }
               }
             },
