@@ -791,7 +791,8 @@
                         "https://tiles.edugis.nl/data/public.provincies_2023_geo/mvt/{z}/{x}/{y}?geom_column=geom&columns=provincienaam,water,omgevingsadressendichtheid,bevolkingsdichtheid_inwoners_per_km2,aantal_inwoners,mannen,vrouwen,percentage_personen_0_tot_15_jaar,percentage_personen_15_tot_25_jaar,percentage_personen_25_tot_45_jaar,percentage_personen_45_tot_65_jaar,percentage_personen_65_jaar_en_ouder,percentage_ongehuwd,percentage_gescheid,percentage_verweduwd,aantal_huishoudens,percentage_eenpersoonshuishoudens,percentage_huishoudens_zonder_kinderen,percentage_huishoudens_met_kinderen,gemiddelde_huishoudsgrootte,percentage_met_herkomstland_nederland,percentage_met_herkomstland_uit_europa_excl_nl,percentage_met_herkomstland_buiten_europa,percentage_geb_in_nl_met_herkomstland_nederland,perc_geb_in_nl_met_herkomstland_in_europa_ex_nl,perc_geb_in_nl_met_herkomstland_buiten_europa,perc_geb_buiten_nl_met_herkomstlnd_in_europa_ex_nl,perc_geb_buiten_nl_met_herkomstlnd_buiten_europa,oppervlakte_totaal_in_ha,oppervlakte_land_in_ha,oppervlakte_water_in_ha&include_nulls=0"
                       ],
                       "bounds": [3.30793777958783, 50.7503734330573, 7.22699558355019, 53.5764233247369],
-                      "attribution": "CBS"
+                      "attribution": "CBS",
+                      "maxzoom": 15
                     }
                   },
                   "layers": [
@@ -1707,7 +1708,8 @@
                         "https://tiles.edugis.nl/data/public.provincies_2023_geo/mvt/{z}/{x}/{y}?geom_column=labelpoint&columns=provincienaam,water&include_nulls=0"
                       ],
                       "bounds": [3.30793777958783, 50.7503734330573, 7.22699558355019, 53.5764233247369],
-                      "attribution": "EduGIS"
+                      "attribution": "EduGIS",
+                      "maxzoom": 15
                     },
                     "source-layer": "public.provincies_2023_geo",
                     "paint": {
@@ -10405,7 +10407,7 @@
     },
     {
       "type": "group",
-      "title": "Milieuvervuiling",
+      "title": "Leefomgeving",
       "sublayers": [
         {
           "type": "group",
@@ -10513,7 +10515,7 @@
                 }
               }
             }
-          ]
+          ]          
         },
         {
           "type": "group",
@@ -10583,6 +10585,39 @@
                   "type": "raster",
                   "bounds": [3.20009, 50.7167, 7.27283, 53.5571],
                   "tiles": ["https://data.rivm.nl/geo/lucht/wms?layers=actueel_o3&STYLES=lucht_o3"],
+                  "attribution": "RIVM"
+                }
+              }
+            }
+          ]
+        },
+        {
+          "type": "group",
+          "title": "Geluid",
+          "sublayers": [
+            {
+              "type": "wms",
+              "title": "Geluidbelasting",
+              "layerInfo": {
+                "id": "geluidbelasting",
+                "type": "raster",
+                "metadata": {
+                  "getFeatureInfoFormat": "application/json",
+                  "attributes": {
+                    "translations": [
+                      {
+                        "name": "GRAY_INDEX",
+                        "translation": "Geluidbelasting",
+                        "unit": " dB",
+                        "decimals": 0
+                      }
+                    ]
+                  }
+                },
+                "source": {
+                  "type": "raster",
+                  "bounds": [3.20009, 50.7167, 7.27283, 53.5571],
+                  "tiles": ["https://data.rivm.nl/geo/alo/wms?REQUEST=GetMap&SERVICE=WMS&VERSION=1.3.0&FORMAT=image%2Fpng&STYLES=&TRANSPARENT=true&LAYERS=rivm_20220601_Geluid_lden_allebronnen_2020&&BUFFER=1&EXCEPTIONS=INIMAGE"],
                   "attribution": "RIVM"
                 }
               }
