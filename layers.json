@@ -7549,21 +7549,190 @@
               }
             },
             {
-              "type": "wms",
               "title": "Bouwjaar panden 2D",
+              "id": "bouwjaar2d",
               "layerInfo": {
-                "id": "pandenbouwjaar",
-                "type": "raster",
-                "minzoom": 11,
-                "maxzoom": 22,
+                "id": "1d96975a-ffe4-441b-8832-be150d8667a",
+                "metadata": {
+                  "attributes": {
+                    "deniedattributes": ["id"],
+                    "emphasize": ["bouwjaar"],
+                    "translations": [
+                      {
+                        "name": "identificatie",
+                        "translation": "bag id"
+                      },
+                      {
+                        "name": "pandstatus"
+                      },
+                      {
+                        "name": "bouwjaar",
+                        "translation": "bouwjaar",
+                        "valuemap": [
+                          [1900, "1890 - 1899", "<"],
+                          [1920, "1900 - 1919", "<"],
+                          [1945, "1920 - 1944", "<"],
+                          [1965, "1945 - 1964", "<"],
+                          [1975, "1965 - 1974", "<"],
+                          [1978, "1975 - 1977", "<"],
+                          [1982, "1978 - 1981", "<"],
+                          [1990, "1982 - 1989", "<"],
+                          [2000, "1990 - 1999", "<"],
+                          [2005, "2000 - 2004", "<"],
+                          [2015, "2005 - 2014", "<"],
+                          [2023, "2015 - 2023", "<"]
+                        ]
+                      },
+                      {
+                        "name": "verblijfsobjecten"
+                      },
+                      {
+                        "name": "oppervlakteverblijfsobjecten",
+                        "translation": "oppervlakte verblijfsobjecten",
+                        "unit": " m2"
+                      },
+                      {
+                        "name": "gebouwtypen"
+                      },
+                      {
+                        "name": "nummerreeks"
+                      },
+                      {
+                        "name": "elabels",
+                        "translation": "energielabels"
+                      },
+                      {
+                        "name": "meestvoorkomendelabel",
+                        "translation": "meestvoorkomend energie-label"
+                      },
+                      {
+                        "name": "postcodes"
+                      },
+                      {
+                        "name": "meestvoorkomendepostcode",
+                        "translation": "meest voork. postcode"
+                      },
+                      {
+                        "name": "volume",
+                        "unit": " m3"
+                      },
+                      {
+                        "name": "gem_hoogte",
+                        "translation": "gem hoogte",
+                        "unit": " m",
+                        "decimals": 1
+                      },
+                      {
+                        "name": "gem_bouwlagen",
+                        "translation": "gem bouwlagen"
+                      },
+                      {
+                        "name": "vloeroppervlakte1",
+                        "unit": " m2"
+                      },
+                      {
+                        "name": "vloeroppervlakte2",
+                        "unit": " m2"
+                      },
+                      {
+                        "name": "gem_hoogte",
+                        "translation": "gem dakhoogte (NAP)",
+                        "unit": " m",
+                        "decimals": 1
+                      },
+                      {
+                        "name": "gem_bouwlagen",
+                        "translation": "geschat aantal bouwlagen"
+                      },
+                      {
+                        "name": "h_maaiveld",
+                        "translation": "maaiveld (NAP)",
+                        "unit": " m",
+                        "decimals": 1
+                      },
+                      {
+                        "name": "dd_h_dak_min",
+                        "translation": "min dakhoogte (NAP)",
+                        "unit": " m",
+                        "decimals": 1
+                      },
+                      {
+                        "name": "dd_h_dak_50p",
+                        "translation": "dakhoogte 50p (NAP)",
+                        "unit": " m",
+                        "decimals": 1
+                      },
+                      {
+                        "name": "dd_h_dak_70p",
+                        "translation": "dakhoogte 70p (NAP)",
+                        "unit": " m",
+                        "decimals": 1
+                      },
+                      {
+                        "name": "hoogte_dak_max",
+                        "translation": "hoogte",
+                        "unit": " m",
+                        "decimals": 1
+                      },
+                      {
+                        "name": "dak_type",
+                        "translation": "dak type"
+                      },
+                      {
+                        "name": "kas_warenhuis",
+                        "translation": "kas of warenhuis",
+                        "valuemap": [
+                          [true, "ja"],
+                          [false, "nee"]
+                        ]
+                      },
+                      {
+                        "name": "ondergronds_type",
+                        "translation": "ondergronds type"
+                      }
+                    ]
+                  }
+                },
+                "minzoom": 12,
+                "type": "fill",
                 "source": {
-                  "bounds": [3.20009, 50.7167, 7.27283, 53.5571],
-                  "type": "raster",
-                  "tileSize": 512,
+                  "type": "vector",
                   "tiles": [
-                    "https://pico.geodan.nl/cgi-bin/qgis_mapserv.fcgi?DPI=120&map=/usr/lib/cgi-bin/projects/gknBouwjaar.qgs&transparent=true&LAYERS=gknBouwjaar&FORMAT=image%2Fpng&SERVICE=WMS&VERSION=1.1.1&REQUEST=GetMap&STYLES=&SRS=EPSG%3A3857&width=512&height=512&bbox={bbox-epsg-3857}"
+                    "https://tiles.edugis.nl/data/nldata.gebouw3d/mvt/{z}/{x}/{y}?geom_column=geom&columns=id,identificatie,bouwjaar,pandstatus,verblijfsobjecten,oppervlakteverblijfsobjecten,gebouwtypen,nummerreeks,elabels,meestvoorkomendelabel,postcodes,meestvoorkomendepostcode,volume,gem_hoogte,gem_bouwlagen,vloeroppervlakte1,vloeroppervlakte2,h_maaiveld,dd_h_dak_min,dd_h_dak_50p,dd_h_dak_70p,dd_h_dak_max,hoogte_dak_max,dak_type,kas_warenhuis,ondergronds_type&include_nulls=0"
                   ],
-                  "attribution": "Pico, Kadaster"
+                  "bounds": [3.25524871110589, 50.7347266517351, 7.24079584680245, 53.5258520631408],
+                  "minzoom": 12
+                },
+                "source-layer": "nldata.gebouw3d",
+                "paint": {
+                  "fill-color": [
+                    "case",
+                    ["<", ["get", "bouwjaar"], 1900],
+                    "#99140a",
+                    ["<", ["get", "bouwjaar"], 1920],
+                    "#c6141f",
+                    ["<", ["get", "bouwjaar"], 1945],
+                    "#f21434",
+                    ["<", ["get", "bouwjaar"], 1965],
+                    "#f7512c",
+                    ["<", ["get", "bouwjaar"], 1975],
+                    "#f79520",
+                    ["<", ["get", "bouwjaar"], 1978],
+                    "#f7d915",
+                    ["<", ["get", "bouwjaar"], 1982],
+                    "#d5da32",
+                    ["<", ["get", "bouwjaar"], 1990],
+                    "#97a56f",
+                    ["<", ["get", "bouwjaar"], 2000],
+                    "#5970ad",
+                    ["<", ["get", "bouwjaar"], 2005],
+                    "#1b3beb",
+                    ["<", ["get", "bouwjaar"], 2015],
+                    "#5b24e3",
+                    ["<", ["get", "bouwjaar"], 2023],
+                    "#a911d3",
+                    "black"
+                  ]
                 }
               }
             },
