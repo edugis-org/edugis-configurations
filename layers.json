@@ -149,7 +149,15 @@
             },
             "type": "raster",
             "source": {
-              "url": "https://dev.virtualearth.net/REST/V1/Imagery/Metadata/Road?output=json&include=ImageryProviders&uriScheme=https&key={bingkey}",
+              "type": "raster",
+              "tileSize": 256,
+              "attribution": "© 2022 Microsoft Corporation|© 2022 TomTom|© 2022 Zenrin",
+              "tiles": [
+                "https://ecn.t0.tiles.virtualearth.net/tiles/r{quadkey}.jpeg?g=12327&mkt=nl-BE&shading=hill",
+                "https://ecn.t1.tiles.virtualearth.net/tiles/r{quadkey}.jpeg?g=12327&mkt=nl-BE&shading=hill",
+                "https://ecn.t2.tiles.virtualearth.net/tiles/r{quadkey}.jpeg?g=12327&mkt=nl-BE&shading=hill",
+                "https://ecn.t3.tiles.virtualearth.net/tiles/r{quadkey}.jpeg?g=12327&mkt=nl-BE&shading=hill"
+              ],
               "maxzoom": 19
             }
           }
@@ -207,7 +215,15 @@
             },
             "type": "raster",
             "source": {
-              "url": "https://dev.virtualearth.net/REST/V1/Imagery/Metadata/Aerial?output=json&include=ImageryProviders&uriScheme=https&key={bingkey}",
+              "type": "raster",
+              "tileSize": 256,
+              "attribution": "© 2024 Microsoft Corporation|© 2024 Maxar|©CNES (2024) Distribution Airbus DS|© 2024 TMAP MOBILITY|Earthstar Geographics  SIO",
+              "tiles": [
+                "https://ecn.t0.tiles.virtualearth.net/tiles/a{quadkey}.jpeg?g=12327",
+                "https://ecn.t1.tiles.virtualearth.net/tiles/a{quadkey}.jpeg?g=12327",
+                "https://ecn.t2.tiles.virtualearth.net/tiles/a{quadkey}.jpeg?g=12327",
+                "https://ecn.t3.tiles.virtualearth.net/tiles/a{quadkey}.jpeg?g=12327"
+              ],
               "maxzoom": 18
             }
           }
@@ -271,7 +287,15 @@
             },
             "type": "raster",
             "source": {
-              "url": "https://dev.virtualearth.net/REST/V1/Imagery/Metadata/AerialWithLabels?output=json&include=ImageryProviders&uriScheme=https&key={bingkey}",
+              "type": "raster",
+              "tileSize": 256,
+              "attribution": "© 2023 Microsoft Corporation|© 2023 Maxar|©CNES (2023) Distribution Airbus DS|© 2023 TMAP MOBILITY|Earthstar Geographics  SIO|© 2023 TomTom|© 2023 Zenrin",
+              "tiles": [
+                "https://ecn.t0.tiles.virtualearth.net/tiles/h{quadkey}.jpeg?g=12327&mkt=nl-BE",
+                "https://ecn.t1.tiles.virtualearth.net/tiles/h{quadkey}.jpeg?g=12327&mkt=nl-BE",
+                "https://ecn.t2.tiles.virtualearth.net/tiles/h{quadkey}.jpeg?g=12327&mkt=nl-BE",
+                "https://ecn.t3.tiles.virtualearth.net/tiles/h{quadkey}.jpeg?g=12327&mkt=nl-BE"
+              ],
               "maxzoom": 18
             }
           }
